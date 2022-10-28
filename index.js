@@ -86,15 +86,16 @@ const assignMember = function () {
       teamBox.classList.add("team-box", "flex-col");
 
       //create the new team member row for each member
+      let randomMember;
       for (let member = 0; member < numberOfTeams; member++) {
         //create new TeamMember
         const teamMemberElement = document.createElement("div");
         teamMemberElement.classList.add("team-member");
-        const randomMember = selectRandomMember();
+        randomMember = selectRandomMember();
         teamMemberElement.innerText = randomMember;
 
         //add teamMember to teamBox
-        teamBox.appendChild(teamMember);
+        teamBox.appendChild(teamMemberElement);
       }
       teamItem.appendChild(teamBox);
 
@@ -108,8 +109,8 @@ const assignMember = function () {
 const selectRandomMember = function () {
   const memberIndex = Math.floor(Math.random() * memberListArray.length);
   const randomMember = memberListArray[memberIndex];
-  memberListArray.splice(memberIndex);
-  //   console.log("random member:", randomMember);
-  //   console.log(memberListArray);
+  memberListArray.splice(memberIndex, 1);
+  console.log("random member:", randomMember);
+  console.log(memberListArray);
   return randomMember;
 };
