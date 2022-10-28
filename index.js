@@ -1,5 +1,5 @@
 window.onload = function () {
-  let numberOfTeams;
+  let numberOfTeams = 3;
 };
 
 const memberListArray = [];
@@ -34,6 +34,8 @@ const addNewTeamMember = function () {
   } else {
     alert("You must type a member name");
   }
+
+  //TODO: check if the input includes only letters
 };
 
 const decreaseNumberOfTeams = function () {
@@ -52,6 +54,33 @@ const increaseNumberOfTeams = function () {
   numberOfTeams = numberOfTeamsElement.innerText;
   numberOfTeams++;
   numberOfTeamsElement.innerText = numberOfTeams;
+};
 
-  //TODO: check if the number of member smaller then number of teams
+const assignMember = function () {
+  //get the value of number of teams
+  const numberOfTeamsElement = document.querySelector(".number-of-teams");
+  numberOfTeams = numberOfTeamsElement.innerText;
+  //check if the number of member smaller then number of teams
+  if (memberListArray.length >= numberOfTeams) {
+    //target the section right to add new team items
+    const teamsSection = document.querySelector(".section-right");
+
+    //create new team item
+    const teamItem = document.createElement("div");
+    teamItem.classList.add("team-item flex-col");
+
+    //create team header (represent "team 1, team 2, ...")
+    const teamHeader = document.createElement("div");
+    teamHeader.classList.add("team-header");
+
+    //create team box (it holds the member names)
+    const teamBox = document.createElement("div");
+    teamBox.classList.add("team-box flex-col");
+
+    //create the new team member row
+    const teamMember = document.createElement("div");
+    teamMember.classList.add("team-member");
+  } else {
+    alert("number of teams can't be bigger than number of members!");
+  }
 };
