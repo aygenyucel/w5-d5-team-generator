@@ -30,8 +30,16 @@ const decreaseNumberOfTeams = function () {
   if (numberOfTeams > 2) {
     numberOfTeams--;
     numberOfTeamsElement.innerText = numberOfTeams;
-    console.log(numberOfTeams);
   } else {
     alert("Teams must be 2 or more people!");
   }
+};
+
+const increaseNumberOfTeams = function () {
+  const numberOfTeamsElement = document.querySelector(".number-of-teams");
+  numberOfTeams = numberOfTeamsElement.innerText;
+  numberOfTeams++;
+  numberOfTeamsElement.innerText = numberOfTeams;
+
+  //TODO: check if the number of member smaller then number of teams
 };
