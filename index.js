@@ -2,26 +2,38 @@ window.onload = function () {
   let numberOfTeams;
 };
 
+const memberListArray = [];
+
 const addNewTeamMember = function () {
   //targeting the member input element
   const memberInputElement = document.querySelector(".add-member-input");
 
   //targeting member list section
-  const memberListElement = document.querySelector(".member-list-section");
+  const memberListElement = document.querySelector(".member-list");
 
   //creating new member
   const newMemberElement = document.createElement("div");
 
-  //assigning the input value to new div
-  newMemberElement.innerText = memberInputElement.value;
+  //if input is not empty assign the input value to new div
 
-  //adding class name
-  newMemberElement.classList.add("new-member");
+  if (memberInputElement.value != "") {
+    const newMemberName = memberInputElement.value;
+    newMemberElement.innerText = newMemberName;
 
-  //adding to new member div to member list section
-  memberListElement.appendChild(newMemberElement);
+    //adding new member element to memberListarray
+    memberListArray.push(newMemberName);
+    console.log(memberListArray);
 
-  memberInputElement.value = "";
+    //adding class name to new member element
+    newMemberElement.classList.add("new-member");
+
+    //adding to new member div to member list section
+    memberListElement.appendChild(newMemberElement);
+
+    memberInputElement.value = "";
+  } else {
+    alert("You must type a member name");
+  }
 };
 
 const decreaseNumberOfTeams = function () {
