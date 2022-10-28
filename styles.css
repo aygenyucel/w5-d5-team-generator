@@ -53,7 +53,7 @@ body {
 .container {
   background-color: #f7f9fa;
   min-height: 100vh;
-  padding: 20px;
+  padding: 30px 100px;
 }
 
 .section-left {
