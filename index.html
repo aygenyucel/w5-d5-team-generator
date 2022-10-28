@@ -8,6 +8,51 @@
     <title>Team Generator</title>
   </head>
   <body>
+    <div class="container">
+      <div class="header">TEAM GENERATOR</div>
+      <div class="main-seciton">
+        <div class="section-left">
+          <div class="input-section">
+            <div class="member">
+              <div>Add Member</div>
+              <input class="add-member-input" type="text" value="Name" />
+              <button class="add-member-btn">Add</button>
+            </div>
+            <div class="teams">
+              <div>Teams</div>
+              <button class="decrease-team-btn">-</button>
+              <div class="team-number">3</div>
+              <!-- team number will be change according to result of clicking decrease and increase btns -->
+              <button class="increase-team-btn">+</button>
+            </div>
+          </div>
+          <div class="member-list-section">
+            <!-- we'll see all members whenever new member added -->
+            <!-- <div class="new-member"></div> -->
+          </div>
+          <div>
+            <button class="assign-member-btn">Assign Member</button>
+            <button class="reset-btn">Reset</button>
+          </div>
+        </div>
+        <div class="section-right">
+          <div class="team-container">
+            <!-- will be flex and wrap all boxes -->
+            <div class="team-item">
+              <!-- number of team-item will be change according to team number input -->
+              <div class="team-header">1</div>
+              <!-- team header will be change dynamically -->
+              <div class="team-box">
+                <!-- members adding inside team-box dynamically -->
+                <div class="team-member">Jimmy</div>
+                <div class="team-member">John</div>
+                <div class="team-member">Richard</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
