@@ -60,27 +60,56 @@ const assignMember = function () {
   //get the value of number of teams
   const numberOfTeamsElement = document.querySelector(".number-of-teams");
   numberOfTeams = numberOfTeamsElement.innerText;
+
+  //check the number of members
   //check if the number of member smaller then number of teams
   if (memberListArray.length >= numberOfTeams) {
     //target the section right to add new team items
     const teamsSection = document.querySelector(".section-right");
 
-    //create new team item
-    const teamItem = document.createElement("div");
-    teamItem.classList.add("team-item flex-col");
+    // calculate the how many teams you can make
+    let allTeams = Math.floor(memberListArray.length / numberOfTeams);
 
-    //create team header (represent "team 1, team 2, ...")
-    const teamHeader = document.createElement("div");
-    teamHeader.classList.add("team-header");
+    for (let teamNo = 1; teamNo <= allTeams; teamNo++) {
+      //create new team item
+      const teamItem = document.createElement("div");
+      teamItem.classList.add("team-item", "flex-col");
 
-    //create team box (it holds the member names)
-    const teamBox = document.createElement("div");
-    teamBox.classList.add("team-box flex-col");
+      //create team header (represent "team 1, team 2, ...")
+      const teamHeader = document.createElement("div");
+      teamHeader.classList.add("team-header");
+      teamHeader.innerText = "team " + teamNo;
+      teamItem.appendChild(teamHeader);
 
-    //create the new team member row
-    const teamMember = document.createElement("div");
-    teamMember.classList.add("team-member");
+      //create team box (it holds the member names)
+      const teamBox = document.createElement("div");
+      teamBox.classList.add("team-box", "flex-col");
+
+      //create the new team member row for each member
+      for (let member = 0; member < numberOfTeams; member++) {
+        //create new TeamMember
+        const teamMemberElement = document.createElement("div");
+        teamMemberElement.classList.add("team-member");
+        const randomMember = selectRandomMember();
+        teamMemberElement.innerText = randomMember;
+
+        //add teamMember to teamBox
+        teamBox.appendChild(teamMember);
+      }
+      teamItem.appendChild(teamBox);
+
+      teamsSection.appendChild(teamItem);
+    }
   } else {
     alert("number of teams can't be bigger than number of members!");
   }
+};
+
+const selectRandomMember = function () {
+  const memberIndex = Math.floor(Math.random() * memberListArray.length);
+  const randomMember = memberListArray[memberIndex];
+  memberListArray.splice(memberIndex);
+  //   console.log("random member:", randomMember);
+  //   console.log(memberListArray);
+  return randomMember;
 };
