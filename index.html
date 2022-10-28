@@ -15,25 +15,38 @@
           <div class="input-section flex">
             <div class="member flex-col">
               <div>Add Member</div>
-              <input class="add-member-input" type="text" value="Name" />
-              <button class="add-member-btn blue-btn">Add</button>
+              <input
+                class="add-member-input"
+                type="text"
+                placeholder="Name"
+                onfocus="this.value=''"
+              />
+              <button
+                class="add-member-btn blue-btn"
+                onclick="addNewTeamMember()"
+              >
+                Add
+              </button>
             </div>
             <div class="teams flex-col">
               <div>Teams</div>
-              <button class="decrease-team-btn blue-btn">-</button>
-              <div class="team-number">3</div>
+              <button
+                class="decrease-team-btn blue-btn"
+                onclick="decreaseNumberOfTeams()"
+              >
+                -
+              </button>
+              <div class="number-of-teams">3</div>
               <!-- team number will be change according to result of clicking decrease and increase btns -->
               <button class="increase-team-btn blue-btn">+</button>
             </div>
           </div>
           <div class="member-list-section flex-col">
             <!-- we'll see all members whenever new member added -->
-            <div class="new-member">John</div>
-            <div class="new-member">John</div>
-            <div class="new-member">John</div>
-            <div class="new-member">John</div>
-            <div class="new-member">John</div>
-            <div class="new-member">John</div>
+            <div class="new-member">new team member</div>
+            <div class="new-member">new team member</div>
+            <div class="new-member">new team member</div>
+            <div class="new-member">new team member</div>
           </div>
           <div class="result-btns flex">
             <button class="assign-member-btn blue-btn">Assign Member</button>
@@ -48,86 +61,45 @@
             <!-- team header will be change dynamically -->
             <div class="team-box flex-col">
               <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
             </div>
           </div>
           <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
             <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
+
             <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
             </div>
           </div>
           <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
             <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
+
             <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
             </div>
           </div>
           <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
             <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
+
             <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
             </div>
           </div>
           <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
             <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
+
             <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
-            </div>
-          </div>
-          <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
-            <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
-            <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
-            </div>
-          </div>
-          <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
-            <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
-            <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">Jimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
-            </div>
-          </div>
-          <div class="team-item flex-col">
-            <!-- number of team-item will be change according to team number input -->
-            <div class="team-header">1</div>
-            <!-- team header will be change dynamically -->
-            <div class="team-box flex-col">
-              <!-- members adding inside team-box dynamically -->
-              <div class="team-member">JimmyJimmyJimmyJimmy</div>
-              <div class="team-member">John</div>
-              <div class="team-member">Richard</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
+              <div class="team-member">Team member</div>
             </div>
           </div>
         </div>

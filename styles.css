@@ -52,7 +52,7 @@ body {
 
 .container {
   background-color: #f7f9fa;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
 }
 
@@ -114,12 +114,14 @@ body {
   margin: 0px 30px;
   width: 100%;
   justify-content: flex-start;
+  height: 100%;
 }
 
 .section-right > .team-item {
   margin-right: 10px;
   margin-bottom: 10px;
-  width: 120px;
+  width: 140px;
+  padding: 10px;
   overflow-y: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
